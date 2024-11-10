@@ -1,0 +1,43 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("w:/me_handmadehero/" . "code/")
+ ("w:/" . "me_handmadehero/")
+ ("c:/Users/amgun/AppData/Roaming/" . ".emacs.d/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "c:/Users/amgun/AppData/Roaming/.emacs.d/"
+ "w:/me_handmadehero/code/"
+ "d:/dev/me_handmadehero/code/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "init.el"
+ "win32_handmade.cpp"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("c:/Users/amgun/AppData/Roaming/.emacs.d/" (26405 22439 0 0) "url/" "transient/" "snippets/" "lisp/" "init.el" "ido.last" "elpa/" "auto-save-list/" "amgun+tango-dark-theme.el" "ac-comphist.dat" "../" "./")
+
+ ("w:/me_handmadehero/code/" (26405 22487 0 0) "win32_handmade.h" "win32_handmade.cpp" "build.bat" ".git/" ".#win32_handmade.cpp" "#win32_handmade.cpp#" "../" "./")
+
+ ("c:/Users/amgun/AppData/Local/Temp/build-irony-server-nil/" (26405 22047 0 0) "Testing/" "src/" "DartConfiguration.tcl" "CMakeFiles/" "CMakeCache.txt" "../" "./")
+
+ ("d:/dev/me_handmadehero/code/" (26405 12349 0 0) "win32_handmade.h" "win32_handmade.cpp" "build.bat" ".git/" ".#win32_handmade.cpp" "#win32_handmade.cpp#" "../" "./")
+
+ ("d:/pk6x_git_repos/pk6x_emacs_config/" (26398 43740 0 0) "url/" "transient/" "snippets/" "online_articles/" "old/" "my_keychron_K15max_keymapping.png" "lisp/" "init.el" "ido.last" "elpa/" "auto-save-list/" "amgun+tango-dark-theme.el" "ac-comphist.dat" ".git/" "../" "./")
+
+ ("c:/Users/amgun/AppData/" (26359 19503 0 0) "Roaming/" "LocalLow/" "Local/" "../" "./")
+
+ ("c:/Users/amgun/AppData/Roaming/" (26395 62876 0 0) "Visual Studio Setup/" "Turtle Beach/" "Pentablet V3/" "NZXT CAM/" "NVIDIA/" "NuGet/" "MPC-HC/" "Microsoft/" "MadeWithMischief/" "krita/" "IDM/" "Everything/" "EasyAntiCheat/" "DMCache/" "discord/" "com.adobe.dunamis/" "Adobe/" ".emacs.d/" "../" "./")
+
+ ("w:/me_handmadehero/" (26387 59526 0 0) "misc/" "data/" "code/" "build/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

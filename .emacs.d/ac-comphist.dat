@@ -1,0 +1,586 @@
+((("SoundOutput-" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("magit" .
+   [1 0 0 0 0])
+  ("auto-complete" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("SoundOutput" .
+   [0 0 0 0 0 0 0 0 0 0 4])
+  ("wParam" .
+   [1 0 0 0 0 0])
+  ("WPARAM" .
+   [0 0 1 0 0 0])
+  ("c++-mode-map" .
+   [0 0 0 1 0 0 0 0 0 0 0 0])
+  ("folded-all" .
+   [0 0 0 0 1 0 0 0 0 0])
+  ("hs-hide-all" .
+   [0 0 2 0 0 0 0 0 0 0 2])
+  ("irony-mode" .
+   [0 0 0 0 1 0 0 0 1 0])
+  ("irony" .
+   [1 0 0 0 0])
+  ("font-lock-important-face" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0])
+  ("font-lock-mode-major-mode" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("move-previous-paragraph-beginning-of-text" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("move-next-paragraph-beginning-of-text" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("Dimension" .
+   [0 0 0 2 4 0 0 0 0])
+  ("font-lock-warning-face" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0])
+  ("hs-minor-mode" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 2])
+  ("mode" .
+   [1 0 0 0])
+  ("cut-line" .
+   [0 0 0 0 1 0 0 0])
+  ("kill-word" .
+   [0 0 0 0 0 0 1 0 0])
+  ("deletechar" .
+   [0 0 0 0 0 0 0 1 0 0])
+  ("Running" .
+   [1 0 0 0 1 0 0])
+  ("++" .
+   [1 0])
+  ("member-init-intro" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("c-set-offset" .
+   [0 0 0 0 0 0 0 0 0 1 0 0])
+  ("indent-region" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("open-line-with-indent" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("previous" .
+   [0 0 0 0 0 0 0 2])
+  ("newline" .
+   [2 0 0 0 0 0 0])
+  ("Newline" .
+   [0 0 0 0 0 1 0])
+  ("text" .
+   [1 0 0 0])
+  ("to" .
+   [1 0])
+  ("lines" .
+   [1 0 0 0 0])
+  ("indent-for-tab-command" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("indent-recursively" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("next-line" .
+   [1 0 0 0 0 0 1 0 2])
+  ("Recursively" .
+   [0 0 0 0 0 1 0 0 0 0 0])
+  ("killing" .
+   [1 0 0 0 0 0 0])
+  ("arg" .
+   [11 0 0])
+  ("&optional" .
+   [0 0 0 5 0 0 0 0 0])
+  ("paste-with-indentation-on" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("yank" .
+   [0 0 0 1])
+  ("intern" .
+   [0 0 0 0 1 0])
+  ("indentation" .
+   [1 0 0 0 0 0 0 1 0 0 0])
+  ("foreground-color" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("background-color" .
+   [0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0])
+  ("OutputDebugStringA" .
+   [0 0 1 3 3 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("DeleteObject" .
+   [0 0 0 0 0 0 0 1 0 0 0 0])
+  ("my-margins" .
+   [0 0 0 0 0 0 1 0 0 0])
+  ("f4" .
+   [2 0])
+  ("left-fringe-width" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("setq-default" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("nil" .
+   [10 0 0])
+  ("enable-theme" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("desert" .
+   [2 0 0 0 0 0])
+  ("load-theme" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("color-theme-modern" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("require" .
+   [7 0 0 0 0 0 2])
+  ("DeviceContext" .
+   [0 0 0 1 1 2 1 0 0 0 0 0 1])
+  ("HDC" .
+   [2 0 0])
+  ("internal" .
+   [5 0 0 0 0 0 0 0])
+  ("Height" .
+   [2 0 3 2 0 0])
+  ("Width" .
+   [4 0 1 1 3])
+  ("Window" .
+   [1 0 0 0 0 0])
+  ("search-se" .
+   [2 0 0 0 0 0 0 0 0])
+  ("isearch-backward" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("isearch-done" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("backward-paragraph" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0])
+  ("forward-paragraph" .
+   [0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0])
+  ("indent-relative" .
+   [0 0 0 0 0 1 5 0 0 0 0 0 0 0 1])
+  ("indent" .
+   [3 0 0 0 0 1])
+  ("previous-line" .
+   [0 0 0 0 0 1 0 0 0 0 2 0 1])
+  ("copy-line" .
+   [1 0 0 0 0 0 0 0 0])
+  ("copy-backward-word" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("word" .
+   [1 0 0 0])
+  ("forward" .
+   [1 0 0 0 0 0 0])
+  ("copy-word" .
+   [1 0 0 0 0 0 0 0 0])
+  ("and" .
+   [2 0 0])
+  ("Copy" .
+   [4 0 0 0])
+  ("recenter-top-bottom" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("imenu" .
+   [0 0 0 1 0])
+  ("delete-backward-char" .
+   [0 0 0 0 0 0 0 0 0 2 1 0 0 0 0 0 0 0 0 0])
+  ("featurep" .
+   [0 0 0 0 0 0 0 1])
+  ("isearch-search" .
+   [0 0 0 0 0 0 0 1 0 0 1 0 0 0])
+  ("isearch-mode" .
+   [1 0 0 0 0 0 0 2 0 0 0 0])
+  ("replace-in-region" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("isearch-forward-word" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("isearch" .
+   [1 0 0 0 3 0 1])
+  ("delete-line" .
+   [0 0 0 0 1 0 0 0 0 0 0])
+  ("open-line" .
+   [0 0 0 0 0 0 0 1 1])
+  ("open" .
+   [1 0 0 0])
+  ("global" .
+   [2 0 0 0 0 0])
+  ("insertline" .
+   [0 0 0 1 0 0 0 0 0 0])
+  ("l" .
+   [1])
+  ("n" .
+   [1])
+  ("i" .
+   [1])
+  ("quit" .
+   [1 0 0 0])
+  ("define-key" .
+   [10 0 0 0 0 0 0 0 0 12])
+  ("global-map" .
+   [6 0 0 1 0 0 3 0 0 15])
+  ("m" .
+   [1])
+  ("c" .
+   [1])
+  ("kill-region" .
+   [2 0 0 0 0 0 0 5 1 0 1])
+  ("quit-process" .
+   [0 0 0 0 1 0 0 0 0 0 0 0])
+  ("copy-region-as-kill" .
+   [0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0 0])
+  ("forward-char" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("backward-char" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("C-w" .
+   [1 0 0])
+  ("other-window" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("keyboard-escape-quit" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("next-buffer" .
+   [0 0 0 0 0 0 1 0 0 0 0])
+  ("previous-buffer" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("comment-line" .
+   [0 0 0 0 0 0 0 0 1 0 0 1])
+  ("search" .
+   [2 0 0 1 0 0])
+  ("kill-line" .
+   [0 0 0 0 1 0 0 1 0])
+  ("kill-whole-line" .
+   [0 0 0 0 0 0 0 0 3 1 0 0 0 0 0])
+  ("isearch-word" .
+   [1 0 0 0 0 0 0 0 2 0 1 1])
+  ("kill-backward-chars" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("de" .
+   [1 0])
+  ("global-set-key" .
+   [0 0 0 0 0 0 0 0 0 4 4 0 0 4])
+  ("copy" .
+   [1 0 0 0])
+  ("isearch-forward" .
+   [0 0 0 0 0 0 0 1 0 0 0 2 0 0 0])
+  ("dd" .
+   [1 0])
+  ("delete-char" .
+   [0 0 0 0 0 0 4 0 0 0 0])
+  ("define" .
+   [0 0 0 0 0 1])
+  ("beginning-of-buffer" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("end-of-buffer" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("isearch-wrapped" .
+   [0 0 0 0 0 0 0 0 1 0 0 1 0 0 0])
+  ("isearch-mode-hook" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("isearch-mode-map" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("C/C++" .
+   [0 0 0 0 1])
+  ("compilation" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("kbd" .
+   [4 0 0])
+  ("defun" .
+   [16 0 0 0 0])
+  ("interactive" .
+   [0 0 0 0 0 0 2 0 0 0 9])
+  ("end-of-line" .
+   [1 0 0 2 0 0 0 0 0 0 1])
+  ("newline-and-indent" .
+   [0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0])
+  ("end-of-line-and-indent-new-line" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("beginning" .
+   [2 0 0 0 0 0 0 0 1])
+  ("beginning-of-line" .
+   [0 0 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0])
+  ("indenting" .
+   [0 0 0 0 0 0 1 0 0])
+  ("truncate-string-to-width" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("c-beginning-of-statement" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0])
+  ("c-end-of-statement" .
+   [0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0])
+  ("beginning-of-line-text" .
+   [0 0 0 0 0 2 5 0 0 1 0 0 0 0 0 0 0 0 1 0 0 5])
+  ("ClientRect" .
+   [1 0 0 0 2 0 1 0 0 0])
+  ("BITMAPINFO" .
+   [1 0 0 0 1 2 0 0 1 3])
+  ("HBITMAP" .
+   [2 0 0 0 0 0 0])
+  ("BitmapInfo" .
+   [10 0 0 0 0 0 0 0 0 5])
+  ("BitmapMemory" .
+   [0 0 0 0 0 0 0 1 2 0 0 0])
+  ("bmiHeader" .
+   [0 0 0 0 1 0 0 0 0])
+  ("bitor" .
+   [0 0 0 1 0])
+  ("BimapInfo" .
+   [0 0 0 0 0 1 0 0 0])
+  ("bitand" .
+   [0 0 0 0 1 0])
+  ("global_variable" .
+   [0 0 0 0 1 2 0 0 0 0 0 0 0 0 2])
+  ("BitmapHandle" .
+   [0 0 0 0 0 1 0 3 0 0 0 0])
+  ("BiPlanes" .
+   [0 0 0 0 0 1 0 0])
+  ("BitmapDeviceContext" .
+   [0 0 0 0 0 0 0 1 2 0 0 0 0 0 0 0 0 0 0])
+  ("DIB_RGB_COLORS" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("Win32ResizeDIBSectoin" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ample" .
+   [4 0 0 0 0])
+  ("Set" .
+   [1 0 2])
+  ("set" .
+   [2 0 0])
+  ("left" .
+   [3 0 0 0])
+  ("the" .
+   [1 0 0])
+  ("buffer" .
+   [1 0 0 0 0 0])
+  ("window" .
+   [1 0 0 0 0 0])
+  ("set-window-margins" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 1 2 1 0 0])
+  ("left-margin" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("setq" .
+   [7 0 0 0])
+  ("left-margin-width" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 2])
+  ("add-hook" .
+   [8 0 0 0 0 0 0 3])
+  ("c++-mode-hook" .
+   [4 0 0 1 0 0 0 0 0 0 0 0 1])
+  ("my-toggle-margins" .
+   [0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("window-setup-hook" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1])
+  ("set-window-buffer" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("selected-window" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("current-buffer" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("right-margin-width" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("t" .
+   [1])
+  ("text-mode" .
+   [0 0 0 0 0 0 0 0 2])
+  ("my-set-margins" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("text-mode-hook" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 4 1])
+  ("lambda" .
+   [1 0 0 0 0 0])
+  ("c++-mode" .
+   [4 0 0 0 0 0 0 0])
+  ("my-c++-margin-setup" .
+   [0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("c-common-init" .
+   [0 0 0 0 0 0 1 0 0 1 0 0 0])
+  ("c-mode" .
+   [1 0 0 0 0 0])
+  ("c-mode-common-hook" .
+   [0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0])
+  ("f2" .
+   [1 0])
+  ("f3" .
+   [2 0])
+  ("move-end-of-line" .
+   [0 0 0 0 0 0 0 0 5 0 0 0 0 0 0 0])
+  ("move-beginning-of-line" .
+   [0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("struct" .
+   [0 0 0 0 1 1])
+  ("line" .
+   [3 0 0 0])
+  ("region" .
+   [2 0 0 0 0 0])
+  ("color" .
+   [1 0 0 0 0])
+  ("set-face-attribute" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  (":background" .
+   [0 0 0 0 0 0 0 0 0 0 2])
+  ("default-frame-alist" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("default" .
+   [2 0 0 0 0 0 1])
+  ("ample-flat" .
+   [0 0 0 0 0 0 0 2 0 0])
+  ("WINAPI" .
+   [1 0 0 0 0 0])
+  ("DeviceContextHandle" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0])
+  ("ample/purple" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("truncate-lines" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("*Pixel" .
+   [1 0 0 0 0 0])
+  ("?++" .
+   [1 0 0])
+  ("?--" .
+   [1 0 0])
+  ("indents" .
+   [0 0 0 0 0 1 0])
+  ("indent-to" .
+   [0 0 0 0 0 0 1 0 0])
+  ("c-indent-comm" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("c-indent-command" .
+   [1 0 0 0 0 1 3 1 2 1 0 0 0 0 0 3])
+  ("with" .
+   [3 0 0 0])
+  ("kill-region-with-truncation-on" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("symbol" .
+   [0 0 0 0 0 2])
+  ("funcall" .
+   [1 0 0 0 0 0 0])
+  ("point" .
+   [1 0 0 0 0])
+  ("kill-thi" .
+   [0 0 0 0 0 0 0 1])
+  ("kill-thing" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("goto-char" .
+   [0 0 0 0 0 0 0 0 3])
+  ("mark" .
+   [3 0 0 0])
+  ("kill" .
+   [1 0 0 1])
+  ("backtab" .
+   [0 0 0 0 0 1 0])
+  ("move-next-line-beginning-of-text" .
+   [0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("move-previous-line-beginning-of-text" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("hs-show-block" .
+   [0 0 0 0 0 0 0 0 1 0 1 0 0])
+  ("hs-hide-block" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("prog-mode-hook" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 1 3])
+  ("rainbow-delimiters" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("rainbow-delimiters-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("Company" .
+   [1 0 0 0 0 0 1])
+  ("company" .
+   [2 0 0 0 0 0 0])
+  ("-" .
+   [1])
+  ("company-global-modes" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("after-init-hook" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("global-company-mode" .
+   [0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0])
+  ("flycheck" .
+   [1 0 0 0 0 0 1 0])
+  ("#include" .
+   [1 0 0 0 0 0 0 0])
+  ("int32_t" .
+   [0 0 0 0 3 0 0])
+  ("WindowHandle" .
+   [0 0 0 0 0 0 0 0 1 0 0 1])
+  ("CS_OWNDC" .
+   [0 0 0 0 0 0 0 1])
+  ("TODO" .
+   [4 0 0 0])
+  ("ControllerState" .
+   [1 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("Pad-" .
+   [0 0 0 1])
+  ("DWORD" .
+   [4 0 0 0 0])
+  ("dwUserIndex" .
+   [1 0 0 0 1 0 1 0 0 0 0])
+  ("ControllerIndex" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 2 0 0])
+  ("global_var" .
+   [0 0 0 0 0 0 0 0 1 0])
+  ("x_input_get_state" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 2])
+  ("XInputGetState" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 3])
+  ("XInputSetState_" .
+   [0 0 0 0 0 0 1 1 0 0 0 0 0 0 1])
+  ("XINPUT_STATE" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("XInputSetState" .
+   [0 0 0 0 0 0 0 0 0 3 0 0 0 1])
+  ("__stdcall" .
+   [0 0 0 0 3 0 0 0 0])
+  ("typedef" .
+   [0 0 0 0 0 0 1])
+  ("X_INPUT_GET_STATE" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("typdef" .
+   [1 0 0 0 0 0])
+  ("X_INPUT_SET_STATE" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("x_input_set_state" .
+   [2 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("XInpu" .
+   [0 0 0 0 1])
+  ("XInpuGetStateStub" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("XInputSetStateStub" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("XInputLibrary" .
+   [0 0 0 0 0 0 0 0 1 1 0 0 0])
+  ("GetProcAddress" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("Win32LoadXInput" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("AButton" .
+   [1 0 0 0 0 0 0])
+  ("XINPUT_VIBRATION" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("Vibration" .
+   [1 0 0 0 0 1 0 0 0])
+  ("WParam" .
+   [1 0 0 0 0 0])
+  ("uint32_t" .
+   [0 0 0 0 0 0 1 0])
+  ("LParam" .
+   [1 0 0 0 0 0])
+  ("VKCode" .
+   [0 0 1 0 0 0])
+  ("IsDown" .
+   [0 0 0 0 2 0])
+  ("WasDown" .
+   [0 0 0 1 0 1 0])
+  ("iss" .
+   [0 0 1])
+  ("controllerState" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("forward-list" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("C-M-k" .
+   [1 0 0 0 0])
+  ("kill-sexp" .
+   [1 0 0 0 0 0 0 0 0])
+  ("c-mark-function" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("mark-sexp" .
+   [1 0 0 0 0 0 0 0 0])
+  ("development" .
+   [0 0 0 0 0 1 0 0 0 0 0])
+  ("version" .
+   [1 0 0 0 0 0 0])
+  ("from" .
+   [1 0 0 0])
+  ("add-to-list" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("package-archives" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("lsp-mode" .
+   [1 0 0 0 0 2 0 1])
+  ("BufferDiscription" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("use-package" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("lsp" .
+   [2 0 1])
+  (":ensure" .
+   [1 0 0 0 0 0 0])
+  (":init" .
+   [1 0 0 0 0])))
