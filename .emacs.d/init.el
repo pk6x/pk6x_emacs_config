@@ -695,6 +695,8 @@
  '(company-tooltip-common ((t (:background "gray36" :foreground "gray20"))))
  '(company-tooltip-common-selection ((t (:background "gray26" :foreground "medium aquamarine"))))
  '(company-tooltip-selection ((t (:background "gray" :foreground "gray21"))))
+ '(font-lock-doc-face ((t (:foreground "RoyalBlue1"))))
+ '(font-lock-string-face ((t (:foreground "forest green"))))
  '(highlight ((t (:background "SlateBlue4"))))
  '(hl-line ((t (:extend t :background "blue"))))
  '(mode-line ((t (:weight normal :height 1.2))))
