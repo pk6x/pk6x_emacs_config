@@ -13,14 +13,15 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
 ;; Default startup directory
-(setq default-directory "W:\\")
+;; (setq default-directory "W:\\")
 
 ;; Activate hide-show mode
 (add-hook 'prog-mode-hook 'hs-minor-mode)
 (defun folded-all()
-(interactive)
+  (interactive)
   (hs-minor-mode)
-  (hs-hide-all))
+  (hs-hide-all)
+  )
 (add-hook 'prog-mode-hook 'folded-all)
 
 ;; Colors
@@ -115,7 +116,7 @@
   )
 
 (load-library "view")
-;; (require 'cc-mode)
+(require 'cc-mode)
 (require 'ido)
 (require 'compile)
 (ido-mode t)
@@ -210,29 +211,29 @@
                                     (brace-list-open       .  0)
                                     (brace-list-intro      .  4)))
     (c-echo-syntactic-information-p . t))
-  "Big Fun C++ Style."
+  ;; "Big Fun C++ Style."
   )
 
 (defun big-fun-c-hook ()
   ;; Set my style for the current buffer
   (c-add-style "BigFun" c-default-style t)
-
+  
   ;; 4-space tabs
   (setq tab-width 4
         indent-tabs-mode nil)
-
+  
   ;; Newline indents, semi-colon wont
   (setq c-hanging-semi&comma-criteria '((lambda () 'stop)))
   
   ;; Additional style stuff
   (c-set-offset 'member-init-intro '++)
-
+  
   ;; No hungry backspace
   (c-toggle-auto-hungry-state -1)
   
   ;; Abbrevation expansion
   (abbrev-mode 1)
-
+  
   ;; Format the given file as a header file
   (defun header-format ()
     (interactive)
@@ -243,12 +244,13 @@
     (upcase-region (mark) (point))
     (pop-mark)
     (insert "_H)\n")
-    (insert " // ========================================================================\n")
-    (insert " // $File: $\n")
-    (insert " // $Date: $\n")
-    (insert " // $Revision: $\n")
-    (insert " // $Creator: OOOO $\n")
-    (insert " // ======================================================================== \n")
+    (insert "/* ========================================================================\n")
+    (insert "   $File: $\n")
+    (insert "   $Date: $\n")
+    (insert "   $Revision: $\n")
+    (insert "   $Creator: $\n")
+    (insert "   $Notice:. $\n")
+    (insert "   ======================================================================== */\n")
     (insert "\n")
     (insert "#define ")
     (push-mark)
@@ -258,47 +260,48 @@
     (insert "_H\n")
     (insert "#endif")
     )
-
+  
   ;; Format the given file as a source file
   (defun source-format ()
     (interactive)
     (setq BaseFileName (file-name-sans-extension (file-name-nondirectory buffer-file-name)))
-    (insert " // ========================================================================\n")
-    (insert " // $File: $\n")
-    (insert " // $Date: $\n")
-    (insert " // $Revision: $\n")
-    (insert " // $Creator: OOOO $\n")
-    (insert " // ======================================================================== \n")
+    (insert "/* ========================================================================\n")
+    (insert "   $File: $\n")
+    (insert "   $Date: $\n")
+    (insert "   $Revision: $\n")
+    (insert "   $Creator: $\n")
+    (insert "   $Notice:. $\n")
+    (insert "   ======================================================================== */\n")
     )
-
+  
   (cond ((file-exists-p buffer-file-name) t)
-        ((string-match "[.]hin" buffer-file-name) (source-format))
-        ((string-match "[.]cin" buffer-file-name) (source-format))
-        ((string-match "[.]h" buffer-file-name) (header-format))
-        ((string-match "[.]cpp" buffer-file-name) (source-format))
+	((string-match "[.]hin" buffer-file-name) (source-format))
+	((string-match "[.]cin" buffer-file-name) (source-format))
+	((string-match "[.]h" buffer-file-name) (header-format))
+	((string-match "[.]cpp" buffer-file-name) (source-format))
 	)
-
+  
   (defun find-corresponding-file ()
-    "Find the file that corresponds to this one."
+    ;; "Find the file that corresponds to this one."
     (interactive)
     (setq CorrespondingFileName nil)
     (setq BaseFileName (file-name-sans-extension buffer-file-name))
     (if (string-match "\\.c" buffer-file-name)
-       (setq CorrespondingFileName (concat BaseFileName ".h")))
+	(setq CorrespondingFileName (concat BaseFileName ".h")))
     (if (string-match "\\.h" buffer-file-name)
-       (if (file-exists-p (concat BaseFileName ".c")) (setq CorrespondingFileName (concat BaseFileName ".c"))
-     (setq CorrespondingFileName (concat BaseFileName ".cpp"))))
+	;; (if (file-exists-p (concat BaseFileName ".c")) (setq CorrespondingFileName (concat BaseFileName ".c"))
+	(setq CorrespondingFileName (concat BaseFileName ".cpp")))
     (if (string-match "\\.hin" buffer-file-name)
-       (setq CorrespondingFileName (concat BaseFileName ".cin")))
+	(setq CorrespondingFileName (concat BaseFileName ".cin")))
     (if (string-match "\\.cin" buffer-file-name)
-       (setq CorrespondingFileName (concat BaseFileName ".hin")))
+	(setq CorrespondingFileName (concat BaseFileName ".hin")))
     (if (string-match "\\.cpp" buffer-file-name)
-       (setq CorrespondingFileName (concat BaseFileName ".h")))
+	(setq CorrespondingFileName (concat BaseFileName ".h")))
     (if CorrespondingFileName (find-file CorrespondingFileName)
-       (error "Unable to find a corresponding file"))
+      (error "Unable to find a corresponding file"))
     )
   (defun find-corresponding-file-other-window ()
-    "Find the file that corresponds to this one."
+    ;; "Find the file that corresponds to this one."
     (interactive)
     (find-file-other-window buffer-file-name)
     (find-corresponding-file)
@@ -325,40 +328,40 @@
 ;; C/C++ compilation
 (setq compilation-context-lines 0)
 (setq compilation-error-regexp-alist
-    (cons '("^\\([0-9]+>\\)?\\(\\(?:[a-zA-Z]:\\)?[^:(\t\n]+\\)(\\([0-9]+\\)) : \\(?:fatal error\\|warnin\\(g\\)\\) C[0-9]+:" 2 3 nil (4))
-     compilation-error-regexp-alist)
-    )
+      (cons '("^\\([0-9]+>\\)?\\(\\(?:[a-zA-Z]:\\)?[^:(\t\n]+\\)(\\([0-9]+\\)) : \\(?:fatal error\\|warnin\\(g\\)\\) C[0-9]+:" 2 3 nil (4))
+	    compilation-error-regexp-alist)
+      )
 
 ;; (add-to-list 'compilaton-error-regexp-alist 'amgun-devenv)
- ;; (add-to-list 'compilation-error-regexp-alist-alist '(amgun-devenv
- ;; "*\\([0-9]+>\\)?\\(\\(?:[a-zA-Z]:\\)?[^:(\t\n]+\\)(\\([0-9]+\\)) :
- ;; \\(?:see declaration\\|\\(?:warnin\\(g\\)\\|[a-z ]+\\) C[0-9]+:\\)"
- ;; 2 3 nil (4)))
+;; (add-to-list 'compilation-error-regexp-alist-alist '(amgun-devenv
+;; "*\\([0-9]+>\\)?\\(\\(?:[a-zA-Z]:\\)?[^:(\t\n]+\\)(\\([0-9]+\\)) :
+;; \\(?:see declaration\\|\\(?:warnin\\(g\\)\\|[a-z ]+\\) C[0-9]+:\\)"
+;; 2 3 nil (4)))
 
 (defun find-project-directory-recursive ()
-  "Recursively search for a makefile."
+  ;; "Recursively search for a makefile."
   (interactive)
   (if (file-exists-p build-script) t
-      (cd "../")
-      (find-project-directory-recursive))
+    (cd "../")
+    (find-project-directory-recursive))
   )
 
 (defun lock-compilation-directory ()
-  "The compilation process should NOT hunt for a makefile"
+  ;; "The compilation process should NOT hunt for a makefile"
   (interactive)
   (setq compilation-directory-locked t)
   (message "Compilation directory is locked.")
   )
 
 (defun unlock-compilation-directory ()
-  "The compilation process SHOULD hunt for a makefile"
+  ;; "The compilation process SHOULD hunt for a makefile"
   (interactive)
   (setq compilation-directory-locked nil)
   (message "Compilation directory is roaming.")
   )
 
 (defun find-project-directory ()
-  "Find the project directory."
+  ;; "Find the project directory."
   (interactive)
   (setq find-project-from-directory default-directory)
   (switch-to-buffer-other-window "*compilation*")
@@ -369,7 +372,7 @@
   )
 
 (defun make-without-asking ()
-  "Make the current build."
+  ;; "Make the current build."
   (interactive)
   (if (find-project-directory) (compile build-script))
   (other-window 1)
@@ -387,8 +390,8 @@
 
 ;; Prevent mouse commands activiating bloody `transient-mark-mode'.
 ;; (defadvice mouse-set-region-1 (after no-bloody-t-m-m activate)
-  ;; (if transient-mark-mode (setq transient-mark-mode nil))
-  ;; )
+;; (if transient-mark-mode (setq transient-mark-mode nil))
+;; )
 
 ;; Replace a string without moving point
 (defun replace-string (FromString ToString)
@@ -511,8 +514,6 @@
 (define-key global-map "\e," 'end-of-buffer)
 (define-key global-map "\es" 'isearch-forward)
 (define-key global-map "\eV" 'recenter-top-bottom)
-(define-key global-map "\e/" 'forward-paragraph)
-(define-key global-map "\e'" 'backward-paragraph)
 (define-key global-map "\eD" 'delete-char)
 (define-key global-map "\ed" 'kill-word)
 (global-set-key [C-M-n] 'forward-list)
@@ -520,6 +521,8 @@
 (global-set-key [C-M-k] 'kill-sexp)
 (global-set-key [C-M-h] 'c-mark-function)
 (global-set-key [?\C-\M- ] 'mark-sexp)
+(global-set-key [f7] 'header-format)
+(global-set-key [f6] 'source-format)
 ;; (define-key global-map "\e[" 'start-kbd-macro)
 ;; (define-key global-map "\e]" 'end-kbd-macro)
 ;; (define-key global-map "\ep" 'yank)
@@ -529,6 +532,22 @@
 ;; (define-key global-map "\eD" 'open-line)
 ;; (define-key global-map "\e." 'fill-paragraph)
 ;; (define-key global-map "\eL" 'kill-whole-line)
+
+(defun previous-blank-line ()
+  ;; "Moves to the previous line containing nothing but whitespace."
+  (interactive)
+  (search-backward-regexp "^[ \t]*\n")
+  )
+(define-key global-map "\e'" 'previous-blank-line)
+
+(defun next-blank-line ()
+  ;; "Moves to the next line containing nothing but whitespace."
+  (interactive)
+  (forward-line)
+  (search-forward-regexp "^[ \t]*\n")
+  (forward-line -1)
+  )
+(define-key global-map "\e/" 'next-blank-line)
 
 ;; Open line with indent
 (defun open-line-with-indent(&optional arg)
@@ -682,7 +701,7 @@
  '(make-backup-files nil)
  '(mosue-wheel-follow-mouse nil)
  '(package-selected-packages
-   '(company rainbow-delimiters color-theme-modern visual-fill-column fill-column-indicator which-key use-package flycheck auto-complete ample-theme))
+   '(auto-complete company rainbow-delimiters color-theme-modern visual-fill-column fill-column-indicator which-key use-package flycheck ample-theme))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
