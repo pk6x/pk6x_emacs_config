@@ -15,14 +15,14 @@
 ;; Default startup directory
 ;; (setq default-directory "W:\\")
 
-;; Activate hide-show mode
-(add-hook 'prog-mode-hook 'hs-minor-mode)
+;; hs-minor-mode
+(add-hook 'c++-mode-hook 'hs-minor-mode)
 (defun folded-all()
   (interactive)
   (hs-minor-mode)
   (hs-hide-all)
   )
-(add-hook 'prog-mode-hook 'folded-all)
+(add-hook 'c++-mode-hook 'folded-all)
 
 ;; Colors
 ;; (add-to-list 'default-frame-alist '(foreground-color . "gray56"))
@@ -116,7 +116,7 @@
   )
 
 (load-library "view")
-(require 'cc-mode)
+;; (require 'cc-mode)
 (require 'ido)
 (require 'compile)
 (ido-mode t)
@@ -428,7 +428,10 @@
 
 ;; lsp-mode
 (require 'lsp-mode)
-(add-hook 'prog-mode-hook #'lsp)
+(use-package lsp-mode
+  :ensure t
+  :hook ((c++-mode . lsp)))
+;; (add-hook 'c++-mode-hook #'lsp)
 
 ;; Color theme modern
 (require 'color-theme-modern)
