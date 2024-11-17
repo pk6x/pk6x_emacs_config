@@ -1,6 +1,6 @@
 @echo off
 
-mkdir ..\build
+IF NOT EXIST ..\build mkdir ..\build
 pushd ..\build
-cl -Zi ..\..\me_handmadehero\code\w32_handmadehero.cpp
+cl -FC -Zi ..\..\me_handmadehero\code\win32_handmade.cpp user32.lib gdi32.lib
 popd
