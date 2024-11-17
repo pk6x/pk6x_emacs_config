@@ -13,15 +13,9 @@
 (setq-default message-log-max nil)
 (setq-default lsp-log nil)
 (kill-buffer "*Messages*")
-;; (kill-buffer "*scratch*")
 (add-hook 'minibuffer-setup-hook 
 	  '(lambda ()
 	     (let ((buffer "*Messages*"))
-	       (and (get-buffer buffer)
-		    (kill-buffer buffer)))))
-(add-hook 'minibuffer-setup-hook 
-	  '(lambda ()
-	     (let ((buffer "*scratch*"))
 	       (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
 (add-hook 'minibuffer-setup-hook 
