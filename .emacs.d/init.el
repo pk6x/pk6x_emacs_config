@@ -89,7 +89,7 @@
 (tool-bar-mode -1)
 
 ;; Smooth scrolling
-(setq scroll-step 2)
+(setq scroll-step 1)
 
 ;; Set high limit for undo history
 (setq undo-limit 2000000)
