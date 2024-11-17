@@ -546,7 +546,7 @@
 (define-key global-map "\e<" 'end-of-buffer)
 (define-key global-map "\e>" 'beginning-of-buffer)
 (define-key global-map "\e." 'exchange-point-and-mark)
-;; (define-key global-map "\e," 'start-kbd-macro)
+(define-key global-map "\e," 'isearch-forward-symbol-at-point)
 (define-key global-map "\e?" 'comment-line)
 (global-set-key [f7] 'header-format)
 (global-set-key [f6] 'source-format)
@@ -569,7 +569,6 @@
 (global-set-key [C-M-k] 'kill-sexp)
 (global-set-key [C-M-h] 'c-mark-function)
 (global-set-key [?\C-\M- ] 'mark-sexp)
-
 ;; (define-key global-map "\e]" 'end-kbd-macro)
 ;; (define-key global-map "\ep" 'yank)
 ;; (define-key global-map "\er" 'revert-buffer)
