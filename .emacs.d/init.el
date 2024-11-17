@@ -25,6 +25,11 @@
 		    (kill-buffer buffer)))))
 (add-hook 'minibuffer-setup-hook 
 	  '(lambda ()
+             (let ((buffer "*Flycheck error messages*"))
+               (and (get-buffer buffer)
+		    (kill-buffer buffer)))))
+(add-hook 'minibuffer-setup-hook 
+	  '(lambda ()
 	     (let ((buffer "*clangd::stderr*"))
 	       (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
@@ -718,6 +723,7 @@
    '("8331f440e8c1449573692ce96a43ac549583155ce1ee5607d6df9d1f52bc1d77" default))
  '(delete-auto-save-files nil)
  '(delete-old-versions 'other)
+ '(ede-project-directories '("w:/"))
  '(fit-frame-to-buffer-margins '(5 nil nil nil))
  '(gdb-many-windows t)
  '(global-display-line-numbers-mode t)
@@ -731,6 +737,10 @@
  '(mosue-wheel-follow-mouse nil)
  '(package-selected-packages
    '(auto-complete company rainbow-delimiters color-theme-modern visual-fill-column fill-column-indicator which-key use-package flycheck ample-theme))
+ '(safe-local-variable-values
+   '((eval setq flycheck-clang-include-path
+	   (list
+	    (expand-file-name "code/")))))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -743,10 +753,12 @@
  '(company-tooltip-common ((t (:background "gray36" :foreground "gray20"))))
  '(company-tooltip-common-selection ((t (:background "gray26" :foreground "medium aquamarine"))))
  '(company-tooltip-selection ((t (:background "gray" :foreground "gray21"))))
+ '(flycheck-error ((t nil)))
  '(font-lock-doc-face ((t (:background "#3b3b3b" :foreground "#6aaf50"))))
  '(font-lock-string-face ((t (:foreground "SlateBlue3" :weight normal))))
  '(highlight ((t (:background "gray24"))))
  '(hl-line ((t (:extend t :background "gray19"))))
+ '(lsp-headerline-breadcrumb-path-error-face ((t (:inherit lsp-headerline-breadcrumb-path-face :background "IndianRed2" :underline (:color "Red1" :style wave :position nil) :weight extra-bold))))
  '(mode-line ((t (:weight normal :height 1.2))))
  '(mode-line-active ((t (:background "gray27" :height 1.2 :width normal))))
  '(mode-line-highlight ((t nil)))
