@@ -14,27 +14,27 @@
 (setq-default lsp-log nil)
 (kill-buffer "*Messages*")
 ;; (kill-buffer "*scratch*")
-(add-hook 'minibuffer-exit-hook 
+(add-hook 'minibuffer-setup-hook 
 	  '(lambda ()
 	     (let ((buffer "*Messages*"))
 	       (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
-(add-hook 'minibuffer-exit-hook 
+(add-hook 'minibuffer-setup-hook 
 	  '(lambda ()
 	     (let ((buffer "*scratch*"))
 	       (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
-(add-hook 'minibuffer-exit-hook 
+(add-hook 'minibuffer-setup-hook 
 	  '(lambda ()
              (let ((buffer "*Completions*"))
                (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
-(add-hook 'minibuffer-exit-hook 
+(add-hook 'minibuffer-setup-hook 
 	  '(lambda ()
 	     (let ((buffer "*clangd::stderr*"))
 	       (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
-(add-hook 'minibuffer-exit-hook 
+(add-hook 'minibuffer-setup-hook 
 	  '(lambda ()
              (let ((buffer "*compilation*"))
                (and (get-buffer buffer)
@@ -100,6 +100,7 @@
 ;; Set high limit for undo history
 (setq undo-limit 2000000)
 (setq undo-strong-limit 4000000)
+(setq max-lisp-eval-depth 10000)
 ;; (setq max-specpdl-size 13000)
 
 ;; Insert time of the day
