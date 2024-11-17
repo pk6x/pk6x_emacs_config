@@ -7,8 +7,38 @@
 ;; .
 ;; ---------------------------------------------------- Startup & style ----------------------------------------------------
 ;; Inhibit splash screen
-;; (setq inhibit-splash-screen t)
+(setq inhibit-splash-screen t)
 
+;; Remove buffers
+(setq-default message-log-max nil)
+(setq-default lsp-log nil)
+(kill-buffer "*Messages*")
+;; (kill-buffer "*scratch*")
+(add-hook 'minibuffer-exit-hook 
+	  '(lambda ()
+	     (let ((buffer "*Messages*"))
+	       (and (get-buffer buffer)
+		    (kill-buffer buffer)))))
+(add-hook 'minibuffer-exit-hook 
+	  '(lambda ()
+	     (let ((buffer "*scratch*"))
+	       (and (get-buffer buffer)
+		    (kill-buffer buffer)))))
+(add-hook 'minibuffer-exit-hook 
+	  '(lambda ()
+             (let ((buffer "*Completions*"))
+               (and (get-buffer buffer)
+		    (kill-buffer buffer)))))
+(add-hook 'minibuffer-exit-hook 
+	  '(lambda ()
+	     (let ((buffer "*clangd::stderr*"))
+	       (and (get-buffer buffer)
+		    (kill-buffer buffer)))))
+(add-hook 'minibuffer-exit-hook 
+	  '(lambda ()
+             (let ((buffer "*compilation*"))
+               (and (get-buffer buffer)
+		    (kill-buffer buffer)))))
 ;; Load path
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
