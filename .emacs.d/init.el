@@ -94,7 +94,12 @@
 (tool-bar-mode -1)
 
 ;; Smooth scrolling
-(setq scroll-step 1)
+(setq redisplay-dont-pause t
+      scroll-margin 1
+      scroll-step 1
+      scroll-conservatively 10000
+      scroll-preserve-screen-position 1
+      )
 
 ;; Set high limit for undo history
 (setq undo-limit 2000000)
@@ -454,13 +459,15 @@
   (package-refresh-contents)
   (package-install 'use-package))
 (use-package try :ensure t)
-(use-package which-key :ensure t :config (which-key-mode))
+(use-package which-key :ensure t :config (which-key-mode)
+  )
 
 ;; lsp-mode
 (require 'lsp-mode)
 (use-package lsp-mode
   :ensure t
-  :hook ((c++-mode . lsp)))
+  :hook ((c++-mode . lsp))
+  )
 ;; (add-hook 'c++-mode-hook #'lsp)
 
 ;; Color theme modern
@@ -530,7 +537,7 @@
 (define-key global-map "\eu" 'undo)
 (define-key global-map "\eU" 'upcase-word)
 (define-key global-map "\ev" 'backward-word)
-(define-key global-map "\eV" 'recenter-top-bottom)
+(define-key global-map "\e9" 'recenter-top-bottom)
 (define-key global-map "\ew" 'kill-region)
 (define-key global-map "\eX" 'kill-this-buffer)
 (define-key global-map "\ey" 'move-end-of-line)
@@ -548,9 +555,9 @@
 (define-key global-map "\e." 'exchange-point-and-mark)
 (define-key global-map "\e," 'isearch-forward-symbol-at-point)
 (define-key global-map "\e?" 'comment-line)
-(global-set-key [f7] 'header-format)
-(global-set-key [f6] 'source-format)
-(define-key global-map [f9] 'first-error)
+(define-key global-map [f7] 'header-format)
+(define-key global-map [f6] 'source-format)
+(define-key global-map global-map [f9] 'first-error)
 (define-key global-map [f10] 'previous-error)
 (define-key global-map [f11] 'next-error)
 (define-key global-map [backtab] 'indent-recursively)
@@ -564,19 +571,11 @@
 (define-key global-map [end] 'backward-sentence)
 (define-key global-map [pgup] 'forward-page)
 (define-key global-map [pgdown] 'backward-page)
-(global-set-key [C-M-n] 'forward-list)
-(global-set-key [C-M-p] 'backward-lis)
-(global-set-key [C-M-k] 'kill-sexp)
-(global-set-key [C-M-h] 'c-mark-function)
-(global-set-key [?\C-\M- ] 'mark-sexp)
-;; (define-key global-map "\e]" 'end-kbd-macro)
-;; (define-key global-map "\ep" 'yank)
-;; (define-key global-map "\er" 'revert-buffer)
-;; (define-key global-map "\ej" 'next-line)
-;; (define-key global-map "\ef" 'previous-line)
-;; (define-key global-map "\eD" 'open-line)
-;; (define-key global-map "\e." 'fill-paragraph)
-;; (define-key global-map "\eL" 'kill-whole-line)
+(define-key global-map [C-M-n] 'forward-list)
+(define-key global-map [C-M-p] 'backward-lis)
+(define-key global-map [C-M-k] 'kill-sexp)
+(define-key global-map [C-M-h] 'c-mark-function)
+(define-key global-map [?\C-\M- ] 'mark-sexp)
 
 (defun previous-blank-line ()
   ;; "Moves to the previous line containing nothing but whitespace."
@@ -702,7 +701,8 @@
 		(:eval (format "%s" (propertize (symbol-name major-mode) 'face 'bold)))
 		"  "
 		mode-line-position
-		))
+		)
+	      )
 ;; (add-to-list 'global-mode-string '(" %i"))
 ;; ---------------------------------------------------- End of Modeline configuration ----------------------------------------------------
 
@@ -753,6 +753,7 @@
  '(company-tooltip-common-selection ((t (:background "gray26" :foreground "medium aquamarine"))))
  '(company-tooltip-selection ((t (:background "gray" :foreground "gray21"))))
  '(flycheck-error ((t nil)))
+ '(flycheck-fringe-error ((t (:inherit error))))
  '(font-lock-doc-face ((t (:background "#3b3b3b" :foreground "#6aaf50"))))
  '(font-lock-string-face ((t (:foreground "SlateBlue3" :weight normal))))
  '(highlight ((t (:background "gray24"))))
