@@ -557,7 +557,7 @@
 (define-key global-map "\e?" 'comment-line)
 (define-key global-map [f7] 'header-format)
 (define-key global-map [f6] 'source-format)
-(define-key global-map global-map [f9] 'first-error)
+(define-key global-map [f9] 'first-error)
 (define-key global-map [f10] 'previous-error)
 (define-key global-map [f11] 'next-error)
 (define-key global-map [backtab] 'indent-recursively)
