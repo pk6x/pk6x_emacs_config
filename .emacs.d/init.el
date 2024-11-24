@@ -5,44 +5,66 @@
 ;; .
 ;; .
 ;; .
-;; ---------------------------------------------------- Startup & style ----------------------------------------------------
-;; Inhibit splash screen
-(setq inhibit-splash-screen t)
+;; ---------------------------------------------------- Startup ----------------------------------------------------
+;; Load path
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 
-;; Remove buffers
-(setq-default message-log-max nil)
-(setq-default lsp-log nil)
-(kill-buffer "*Messages*")
-(add-hook 'minibuffer-setup-hook 
+;; Startup windowing
+(add-hook 'window-setup-hook 'toggle-frame-maximized t)
+(setq next-line-add-newlines nil)
+(setq-default truncate-lines t)
+(setq truncate-partial-width-windows nil)
+(split-window-horizontally)
+
+;; Disable mouse middle-click
+(global-unset-key [mouse-2])
+
+;; Colors
+(add-to-list 'default-frame-alist '(cursor-color . "green yellow"))
+
+;; Auto-save
+(defun full-auto-save ()
+  (interactive)
+  (save-excursion
+    (dolist (buf (buffer-list))
+      (set-buffer buf)
+      (if (and (buffer-file-name) (buffer-modified-p))
+          (basic-save-buffer)))))
+(add-hook 'auto-save-mode-hook 'full-auto-save)
+
+;; Disable extra buffers
+(add-hook 'auto-save-hook 
 	  '(lambda ()
 	     (let ((buffer "*Messages*"))
 	       (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
-(add-hook 'minibuffer-setup-hook 
+(add-hook 'auto-save-hook 
 	  '(lambda ()
              (let ((buffer "*Completions*"))
                (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
-(add-hook 'minibuffer-setup-hook 
+(add-hook 'auto-save-hook 
 	  '(lambda ()
              (let ((buffer "*Flycheck error messages*"))
                (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
-(add-hook 'minibuffer-setup-hook 
+(add-hook 'auto-save-hook 
 	  '(lambda ()
 	     (let ((buffer "*clangd::stderr*"))
 	       (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
-(add-hook 'minibuffer-setup-hook 
+(add-hook 'auto-save-hook 
+	  '(lambda ()
+	     (let ((buffer "*lsp-log*"))
+	       (and (get-buffer buffer)
+		    (kill-buffer buffer)))))
+(add-hook 'auto-save-hook 
 	  '(lambda ()
              (let ((buffer "*compilation*"))
                (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
-;; Load path
-(add-to-list 'load-path "~/.emacs.d/lisp/")
 
-;; Default startup directory
-;; (setq default-directory "W:\\")
+;; minibuffer-setup-hook
 
 ;; hs-minor-mode
 (add-hook 'c++-mode-hook 'hs-minor-mode)
@@ -52,14 +74,6 @@
   (hs-hide-all)
   )
 (add-hook 'c++-mode-hook 'folded-all)
-
-;; Colors
-;; (add-to-list 'default-frame-alist '(foreground-color . "gray56"))
-(add-to-list 'default-frame-alist '(cursor-color . "green yellow"))
-
-;; Highlight line 
-(global-hl-line-mode 1)
-(set-face-background 'hl-line "c1a256")
 
 ;; Added syntax class
 (modify-syntax-entry ?– "w")
@@ -72,49 +86,14 @@
 ;; (modify-syntax-entry ?, "w")
 (global-superword-mode)
 
-;; Display column and line position info in the mode-line
-(setq column-number-mode t)
-
-;; Disable mouse middle-click
-(global-unset-key [mouse-2])
-
-;; Turn-on electric pair mode
-(electric-pair-mode 1)
-
-;; Maximise window on startup
-(add-hook 'window-setup-hook 'toggle-frame-maximized t)
-
-;; Startup windowing
-(setq next-line-add-newlines nil)
-(setq-default truncate-lines t)
-(setq truncate-partial-width-windows nil)
-(split-window-horizontally)
-
-;; Disable tools on startup
-(tool-bar-mode -1)
-
-;; Smooth scrolling
-(setq redisplay-dont-pause t
-      scroll-margin 1
-      scroll-step 1
-      scroll-conservatively 10000
-      scroll-preserve-screen-position 1
-      )
-
-;; Set high limit for undo history
-(setq undo-limit 2000000)
-(setq undo-strong-limit 4000000)
-(setq max-lisp-eval-depth 10000)
-;; (setq max-specpdl-size 13000)
-
 ;; Insert time of the day
 (defun insert-timeofday ()
   (interactive "*")
   (insert (format-time-string "---------------- %a, %d %b %y: %I:%M%p"))
   )
-;; ---------------------------------------------------- End of Startup & style ----------------------------------------------------
+;; ---------------------------------------------------- End of Startup ----------------------------------------------------
 
-;; ---------------------------------------------------- From Casey Muratori (C/C++ style and compilation ----------------------------------------------------
+;; ------------------------------------- From Casey Muratori (C/C++ style and compilation ------------------
 ;; To determine the underlying operating system
 (setq system-aquamacs (featurep 'aquamacs))
 (setq system-linux (featurep 'x))
@@ -414,7 +393,7 @@
   )
 (define-key global-map [f5] 'make-without-asking)
 
-					; Commands
+;; Commands
 (set-variable 'grep-command "grep -irHn ")
 (when system-win32
   (set-variable 'grep-command "findstr -s -n -i -l "))
@@ -443,7 +422,7 @@
 		    (beginning-of-buffer)
 		    (replace-regexp-in-region old-word new-word)))
   )
-;; ---------------------------------------------------- End of From Casey Muratori (C/C++ style and compilation ----------------------------------------------------
+;; -------------------------------- End of From Casey Muratori (C/C++ style and compilation -------------------
 
 ;; ---------------------------------------------------- Packages ----------------------------------------------------
 ;; Enabling melpa package archiver
@@ -712,11 +691,33 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(inhibit-splash-screen t)
+ '(message-log-max nil)
+ '(kill-buffer "*Messages*")
+ '(global-auto-revert-mode t)
+ '(global-hl-line-mode 1)
+ '(electric-pair-mode t)
  '(auto-save-default nil)
- '(auto-save-interval 0)
+ '(next-line-add-newlines nil)
+ '(truncate-lines t)
+ '(truncate-partial-width-windows nil)
+ '(split-window-horizontally)
+ '(tool-bar-mode nil)
+ '(undo-limit 2000000)
+ '(undo-strong-limit 4000000)
+ '(max-lisp-eval-depth 10000)
+ '(scroll-margin 1)
+ '(scroll-setup 1)
+ '(scroll-conservatively 10000)
+ '(scroll-preserve-screen-position 1)
+ '(compilation-ask-about-save nil)
+ '(auto-save-visited-mode t)
+ '(auto-save-interval 1)
+ '(auto-save-visited-interval 1)
  '(auto-save-list-file-prefix nil)
- '(auto-save-timeout 0)
+ '(auto-save-timeout 1)
  '(auto-show-mode t t)
+ '(column-number-mode t)
  '(custom-enabled-themes '(ample))
  '(custom-safe-themes
    '("8331f440e8c1449573692ce96a43ac549583155ce1ee5607d6df9d1f52bc1d77" default))
