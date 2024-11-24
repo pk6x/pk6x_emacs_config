@@ -58,13 +58,11 @@
 	     (let ((buffer "*lsp-log*"))
 	       (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
-(add-hook 'auto-save-hook 
+(add-hook 'minibuffer-setup-hook 
 	  '(lambda ()
              (let ((buffer "*compilation*"))
                (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
-
-;; minibuffer-setup-hook
 
 ;; hs-minor-mode
 (add-hook 'c++-mode-hook 'hs-minor-mode)
