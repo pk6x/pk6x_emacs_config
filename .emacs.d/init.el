@@ -33,27 +33,27 @@
 (add-hook 'auto-save-mode-hook 'full-auto-save)
 
 ;; Disable extra buffers
-(add-hook 'auto-save-hook 
+(add-hook 'minibuffer-setup-hook
 	  '(lambda ()
 	     (let ((buffer "*Messages*"))
 	       (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
-(add-hook 'auto-save-hook 
+(add-hook 'minibuffer-setup-hook
 	  '(lambda ()
              (let ((buffer "*Completions*"))
                (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
-(add-hook 'auto-save-hook 
+(add-hook 'minibuffer-setup-hook
 	  '(lambda ()
              (let ((buffer "*Flycheck error messages*"))
                (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
-(add-hook 'auto-save-hook 
+(add-hook 'minibuffer-setup-hook
 	  '(lambda ()
 	     (let ((buffer "*clangd::stderr*"))
 	       (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
-(add-hook 'auto-save-hook 
+(add-hook 'minibuffer-setup-hook
 	  '(lambda ()
 	     (let ((buffer "*lsp-log*"))
 	       (and (get-buffer buffer)
