@@ -323,7 +323,7 @@
     (other-window -1))
   (define-key c++-mode-map [f4] 'find-corresponding-file)
   (define-key c++-mode-map [f3] 'find-corresponding-file-other-window)
-  (define-key c++-mode-map [C-tab] 'indent-region)
+  ;; (define-key c++-mode-map [C-tab] 'indent-region)
   (define-key c++-mode-map "\C-y" 'indent-for-tab-command)
   (define-key c++-mode-map "^[  " 'indent-region)
   )
