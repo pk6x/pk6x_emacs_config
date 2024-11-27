@@ -557,7 +557,7 @@
 (define-key global-map [f9] 'first-error)
 (define-key global-map [f10] 'previous-error)
 (define-key global-map [f11] 'next-error)
-(define-key global-map [backtab] 'indent-recursively)
+;; (define-key global-map [backtab] 'indent-recursively)
 (define-key global-map [M-down] 'scroll-other-window)
 (define-key global-map [M-up] 'scroll-other-window-down)
 (define-key global-map [C-right] 'forward-word)
