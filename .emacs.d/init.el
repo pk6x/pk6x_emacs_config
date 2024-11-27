@@ -147,16 +147,19 @@
 (make-face 'font-lock-fixme-face)
 (make-face 'font-lock-note-face)
 (make-face 'font-lock-important-face)
+(make-face 'font-lock-study-face)
 (mapc (lambda (mode)
 	(font-lock-add-keywords
 	 mode
 	 '(("\\<\\(TODO\\)" 1 'font-lock-fixme-face t)
 	   ("\\<\\(NOTE\\)" 1 'font-lock-note-face t)
+	   ("\\<\\(STUDY\\)" 1 'font-lock-study-face t)
 	   ("\\<\\(IMPORTANT\\)" 1 'font-lock-important-face t)
 	   )))
       fixme-modes)
 (modify-face 'font-lock-fixme-face "Red" nil nil t nil t nil nil)
 (modify-face 'font-lock-note-face "Dark Green" nil nil t nil t nil nil)
+(modify-face 'font-lock-study-face "Yellow" nil nil t nil t nil nil)
 (modify-face 'font-lock-important-face "Yellow" nil nil t nil t nil nil)
 
 ;; Accepted file extensions and their appropriate modes
@@ -445,6 +448,23 @@
   :ensure t
   :hook ((c++-mode . lsp))
   )
+(setq lsp-ui-doc-enable 1)
+(setq lsp-lens-enable 1)
+(setq lsp-headerline-breadcrumb-enable 1)
+(setq lsp-modeline-code-actions-enable 1)
+(setq lsp-modeline-diagnostics-enable 1)
+(setq +format-with-lsp nil)
+(setq lsp-enable-on-type-formatting nil)
+(setq lsp-format-region nil)
+(setq lsp-format-buffer nil)
+(setq lsp-clients-clangd-args
+      '("-j=2"
+        "--background-index"
+        "--clang-tidy"
+        "--completion-style=bundled"
+        "--pch-storage=memory"
+        "--header-insertion=never"
+        "--header-insertion-decorators=0"))
 ;; (add-hook 'c++-mode-hook #'lsp)
 
 ;; Color theme modern
