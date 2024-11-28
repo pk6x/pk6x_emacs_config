@@ -7,8 +7,8 @@ popd
 
 REM Compiler options:
 REM cl, is cl.exe, is the call for MSVC compiler on Windows
-REM -MT, is to compiles to create a multithreaded executable file, by using LIBCMTD.lib (static)
-REM -MD, is to compiles to create a multithreaded DLL, by using MSVCRT.lib (dynamic)
+REM -MT, is to compiles to create a multithreaded executable file, by using LIBCMTD.lib (static library)
+REM -MD, is to compiles to create a multithreaded DLL, by using MSVCRT.lib (dynamic library)
 REM -Oi, is to generate intrinsic functions
 REM -Od, is to disable optimization 
 REM -w4, is a warning level 4
