@@ -1,8 +1,18 @@
 @echo off
 
+set CommonCompilerOptions= -MT -Oi -Od -W4 -WX -wd4201 -wd4100 -wd4189 -FC -Z7 -Fm -DHANDMADE_INTERNAL=1 -DHANDMADE_SLOW=1 -DHANDMADE_WIN32=1
+set CommonLinkerOptions= user32.lib gdi32.lib
+
 IF NOT EXIST ..\build mkdir ..\build
+
 pushd ..\build
-cl -MT -Oi -Od -W4 -WX -wd4201 -wd4100 -wd4189 -FC -Z7 -Fm -DHANDMADE_INTERNAL=1 -DHANDMADE_SLOW=1 -DHANDMADE_WIN32=1 ..\..\me_handmadehero\code\win32_handmade.cpp /link -subsystem:windows user32.lib gdi32.lib
+
+REM 32-bit application
+REM cl %CommonCompilerFlags ..\..\me_handmadehero\code\win32_handmade.cpp /link -subsystem:windows,5.1
+
+REM 65-bit application
+cl %CommonCompilerOptions% ..\..\me_handmadehero\code\win32_handmade.cpp /link -subsystem:windows %CommonLinkerOptions%
+
 popd
 
 REM Compiler options:
@@ -19,7 +29,7 @@ REM -Z7, is to generate complete debugging information/files except (vc10.pdb)
 REM -D<name>, is to define constants and macros
 REM -Fm, is to generate a map file 
 
-REM Link options:
+REM Linker options:
 REM /link, is the call for the linker
 REM -subsystem:windows, is to tell the operating system to run the executable file .exe in a GUI environment
 REM -subsystem:console, is to tell the operating system to run the executable file .exe in a console environment
