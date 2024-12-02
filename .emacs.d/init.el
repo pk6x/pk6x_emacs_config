@@ -404,9 +404,9 @@
 ;; (if transient-mark-mode (setq transient-mark-mode nil)))
 
 ;; Prevent mouse commands activiating bloody `transient-mark-mode'.
-;; (defadvice mouse-set-region-1 (after no-bloody-t-m-m activate)
-;; (if transient-mark-mode (setq transient-mark-mode nil))
-;; )
+(defadvice mouse-set-region-1 (after no-bloody-t-m-m activate)
+  (if transient-mark-mode (setq transient-mark-mode nil))
+  )
 
 ;; Replace a string without moving point
 (defun replace-string (FromString ToString)
