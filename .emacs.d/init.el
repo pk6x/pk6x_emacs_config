@@ -19,6 +19,15 @@
 ;; Disable mouse middle-click
 (global-unset-key [mouse-2])
 
+;; Report matched paren
+(show-paren-mode t)
+
+(defadvice show-paren-function (after show-matching-paren-offscreen activate)
+  (interactive)
+  (let* ((cb (char-before (point)))
+	 (matching-text (and cb (char-equal (char-syntax cb) ?\))
+                             (blink-matching-open))))))
+
 ;; Colors
 (add-to-list 'default-frame-alist '(cursor-color . "green yellow"))
 
@@ -56,6 +65,11 @@
 (add-hook 'minibuffer-setup-hook
 	  '(lambda ()
 	     (let ((buffer "*lsp-log*"))
+	       (and (get-buffer buffer)
+		    (kill-buffer buffer)))))
+(add-hook 'minibuffer-setup-hook
+	  '(lambda ()
+	     (let ((buffer "*Compile-Log*"))
 	       (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
 (add-hook 'minibuffer-setup-hook 
