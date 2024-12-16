@@ -99,10 +99,10 @@
 (global-superword-mode)
 
 ;; Insert time of the day
-(defun insert-timeofday ()
-  (interactive "*")
-  (insert (format-time-string "---------------- %a, %d %b %y: %I:%M%p"))
-  )
+;; (defun insert-timeofday ()
+;; (interactive "*")
+;; (insert (format-time-string "---------------- %a, %d %b %y: %I:%M%p"))
+;; )
 ;; ---------------------------------------------------- End of Startup ----------------------------------------------------
 
 ;; ------------------------------------- From Casey Muratori (C/C++ style and compilation ------------------
@@ -239,7 +239,7 @@
                                     (knr-argdecl-intro     . -4)
                                     (brace-list-open       .  0)
                                     (brace-list-intro      .  4)))
-    (c-echo-syntactic-information-p . t))
+    (c-echo-syntactic-information-p . nil))
   ;; "Big Fun C++ Style."
   )
 
