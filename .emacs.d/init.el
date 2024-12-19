@@ -88,7 +88,7 @@
 (add-hook 'c++-mode-hook 'folded-all)
 
 ;; Added syntax class
-(modify-syntax-entry ?– "w")
+;; (modify-syntax-entry ?– "w")
 ;; (modify-syntax-entry ?+ "w")
 ;; (modify-syntax-entry ?- "w")
 ;; (modify-syntax-entry ?* "w")
@@ -96,7 +96,7 @@
 ;; (modify-syntax-entry ?_ "w")
 ;; (modify-syntax-entry ?# "w")
 ;; (modify-syntax-entry ?, "w")
-(global-superword-mode)
+;; (global-superword-mode)
 
 ;; Insert time of the day
 ;; (defun insert-timeofday ()
@@ -345,8 +345,8 @@
 (add-hook 'c-mode-common-hook 'big-fun-c-hook)
 
 ;; Hook the added syntax class
-(add-hook 'c++-mode-hook 'superword-mode)
-(add-hook 'c++-mode-hook (lambda () (modify-syntax-entry ?- "w")))
+;; (add-hook 'c++-mode-hook 'superword-mode)
+;; (add-hook 'c++-mode-hook (lambda () (modify-syntax-entry ?- "w")))
 ;; (add-hook 'c++-mode-hook (lambda () (modify-syntax-entry ?+ "w")))
 ;; (add-hook 'c++-mode-hook (lambda () (modify-syntax-entry ?- "w")))
 ;; (add-hook 'c++-mode-hook (lambda () (modify-syntax-entry ?* "w")))
