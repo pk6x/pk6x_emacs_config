@@ -457,6 +457,12 @@
   )
 
 ;; lsp-mode
+
+;; To cycle between function prototypes (overloaded functions in c++) in lsp
+;; after typing in the function prototype, in the echo section it will display how many
+;; prototypes are there for the same function signature, e.g. (1/4) function ...
+;; Press M-n to cycle to the next prototype (2/4) or M-p to the previous one (1/4) etc
+
 (require 'lsp-mode)
 (use-package lsp-mode
   :ensure t
