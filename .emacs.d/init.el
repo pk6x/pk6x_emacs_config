@@ -77,6 +77,17 @@
              (let ((buffer "*compilation*"))
                (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
+(add-hook 'minibuffer-setup-hook 
+	  '(lambda ()
+             (let ((buffer "*grep*"))
+               (and (get-buffer buffer)
+		    (kill-buffer buffer)))))
+(add-hook 'minibuffer-setup-hook 
+	  '(lambda ()
+             (let ((buffer "*Ido Completions*"))
+               (and (get-buffer buffer)
+		    (kill-buffer buffer)))))
+
 
 ;; hs-minor-mode
 (add-hook 'c++-mode-hook 'hs-minor-mode)
@@ -203,7 +214,9 @@
     (c-tab-always-indent         . t)
     (c-comment-only-line-offset  . 0)
     (c-hanging-braces-alist      . ((class-open)
-                                    (class-close)
+				    (class-close)
+				    (enum-open)
+				    (enum-close)
                                     (defun-open)
                                     (defun-close)
                                     (inline-open)
