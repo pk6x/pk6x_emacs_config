@@ -114,6 +114,10 @@
 ;; (interactive "*")
 ;; (insert (format-time-string "---------------- %a, %d %b %y: %I:%M%p"))
 ;; )
+
+;; Ligature.el
+;; Enable the www ligature in every possible major mode
+
 ;; ---------------------------------------------------- End of Startup ----------------------------------------------------
 
 ;; ------------------------------------- From Casey Muratori (C/C++ style and compilation ------------------
@@ -500,6 +504,38 @@
         "--header-insertion-decorators=0"))
 ;; (add-hook 'c++-mode-hook #'lsp)
 
+;; Fira code
+;; (use-package fira-code-mode
+;; :custom (fira-code-mode-disabled-ligatures '("[]" "x"))  ; ligatures you don't want
+;; :hook prog-mode)                                         ; mode to enable fira-code-mode in
+
+;; Ligature
+;; This assumes you've installed the package via MELPA.
+(use-package ligature
+  :config
+  ;; Enable the "www" ligature in every possible major mode
+  (ligature-set-ligatures 't '("www"))
+  ;; Enable traditional ligature support in eww-mode, if the
+  ;; `variable-pitch' face supports it
+  (ligature-set-ligatures 'eww-mode '("ff" "fi" "ffi"))
+  ;; Enable all Cascadia Code ligatures in programming modes
+  (ligature-set-ligatures 'prog-mode '("|||>" "<|||" "<==>" "<!--" "####" "~~>" "***" "||=" "||>"
+                                       ":::" "::=" "=:=" "===" "==>" "=!=" "=>>" "=<<" "=/=" "!=="
+                                       "!!." ">=>" ">>=" ">>>" ">>-" ">->" "->>" "-->" "---" "-<<"
+                                       "<~~" "<~>" "<*>" "<||" "<|>" "<$>" "<==" "<=>" "<=<" "<->"
+                                       "<--" "<-<" "<<=" "<<-" "<<<" "<+>" "</>" "###" "#_(" "..<"
+                                       "..." "+++" "/==" "///" "_|_" "www" "&&" "^=" "~~" "~@" "~="
+                                       "~>" "~-" "**" "*>" "*/" "||" "|}" "|]" "|=" "|>" "|-" "{|"
+                                       "[|" "]#" "::" ":=" ":>" ":<" "$>" "==" "=>" "!=" "!!" ">:"
+                                       ">=" ">>" ">-" "-~" "-|" "->" "--" "-<" "<~" "<*" "<|" "<:"
+                                       "<$" "<=" "<>" "<-" "<<" "<+" "</" "#{" "#[" "#:" "#=" "#!"
+                                       "##" "#(" "#?" "#_" "%%" ".=" ".-" ".." ".?" "+>" "++" "?:"
+                                       "?=" "?." "??" ";;" "/*" "/=" "/>" "//" "__" "~~" "(*" "*)"
+                                       "\\\\" "://"))
+  ;; Enables ligature checks globally in all buffers. You can also do it
+  ;; per mode with `ligature-mode'.
+  (global-ligature-mode t))
+
 ;; Color theme modern
 (require 'color-theme-modern)
 (load-theme 'ample-flat t t)
@@ -742,63 +778,62 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(inhibit-splash-screen t)
- '(message-log-max nil)
- '(kill-buffer "*Messages*")
- '(global-auto-revert-mode t)
- '(global-hl-line-mode 1)
- '(electric-pair-mode t)
  '(auto-save-default nil)
- '(next-line-add-newlines nil)
- '(truncate-lines t)
- '(truncate-partial-width-windows nil)
- '(split-window-horizontally)
- '(tool-bar-mode nil)
- '(undo-limit 2000000)
- '(undo-strong-limit 4000000)
- '(max-lisp-eval-depth 10000)
- '(scroll-margin 1)
- '(scroll-setup 1)
- '(scroll-conservatively 10000)
- '(scroll-preserve-screen-position 1)
- '(compilation-ask-about-save nil)
- '(auto-save-visited-mode t)
  '(auto-save-interval 1)
- '(auto-save-visited-interval 1)
  '(auto-save-list-file-prefix nil)
  '(auto-save-timeout 1)
+ '(auto-save-visited-interval 1)
+ '(auto-save-visited-mode t)
  '(auto-show-mode t t)
  '(column-number-mode t)
+ '(compilation-ask-about-save nil)
  '(custom-enabled-themes '(ample))
  '(custom-safe-themes
    '("8331f440e8c1449573692ce96a43ac549583155ce1ee5607d6df9d1f52bc1d77" default))
  '(delete-auto-save-files nil)
  '(delete-old-versions 'other)
  '(ede-project-directories '("w:/"))
+ '(electric-pair-mode t)
  '(fit-frame-to-buffer-margins '(5 nil nil nil))
  '(gdb-many-windows t)
+ '(global-auto-revert-mode t)
  '(global-display-line-numbers-mode t)
+ '(global-hl-line-mode 1)
  '(imenu-auto-rescan t)
  '(imenu-auto-rescan-maxout 500000)
+ '(inhibit-startup-screen t)
  '(kept-new-versions 5)
  '(kept-old-versions 5)
+ '(kill-buffer "*Messages*")
  '(kill-whole-line nil)
  '(make-backup-file-name-function 'ignore)
  '(make-backup-files nil)
+ '(max-lisp-eval-depth 10000)
+ '(message-log-max nil)
  '(mosue-wheel-follow-mouse nil)
+ '(next-line-add-newlines nil)
  '(package-selected-packages
-   '(auto-complete company rainbow-delimiters color-theme-modern visual-fill-column fill-column-indicator which-key use-package flycheck ample-theme))
+   '(ligature fira-code-mode auto-complete company rainbow-delimiters color-theme-modern visual-fill-column fill-column-indicator which-key use-package flycheck ample-theme))
  '(safe-local-variable-values
    '((eval setq flycheck-clang-include-path
 	   (list
 	    (expand-file-name "code/")))))
- '(tool-bar-mode nil))
+ '(scroll-conservatively 10000)
+ '(scroll-margin 1)
+ '(scroll-preserve-screen-position 1)
+ '(scroll-setup 1)
+ '(split-window-horizontally nil)
+ '(tool-bar-mode nil)
+ '(truncate-lines t)
+ '(truncate-partial-width-windows nil)
+ '(undo-limit 2000000)
+ '(undo-strong-limit 4000000))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Cascadia Code" :weight normal :height 110 :width normal))))
+ '(default ((t (:family "Fira Code" :weight semibold :height 110 :width normal))))
  '(company-tooltip ((t (:background "gray26" :foreground "medium aquamarine"))))
  '(company-tooltip-annotation ((t (:foreground "gray46"))))
  '(company-tooltip-common ((t (:background "gray36" :foreground "gray20"))))
