@@ -631,16 +631,20 @@
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
 		  (:commit . "945c9905af2045ab2e57717c01e5b20a907f939a"))])
  (comint-mime .
-	      [(0 6)
+	      [(0 7)
 	       ((emacs
-		 (28 1)))
+		 (28 1))
+		(compat
+		 (29 1))
+		(mathjax
+		 (0 1)))
 	       "Display content of various MIME types in comint buffers" tar
 	       ((:url . "https://github.com/astoff/comint-mime")
 		(:keywords "processes" "multimedia")
 		(:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 		(:authors
 		 ("Augusto Stoffel" . "arstoffel@gmail.com"))
-		(:commit . "b8a5347f80ffc55421997493b646eb922450c720"))])
+		(:commit . "5e7b609a4f8c4ba8ec6d1d994c01143b79b93c33"))])
  (compact-docstrings .
 		     [(0 2)
 		      nil "Shrink blank lines in docstrings and doc comments" tar
@@ -748,20 +752,18 @@
 		    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		   (:commit . "9fbe0f6a2636f46928f02ddde9c454f36aa45f39"))])
  (consult-hoogle .
-		 [(0 2 2)
+		 [(0 3 0)
 		  ((emacs
-		    (27 1))
+		    (28 1))
 		   (consult
-		    (0 18))
-		   (haskell-mode
-		    (16 1)))
+		    (0 18)))
 		  "Hoogle frontend using consult" tar
 		  ((:url . "https://codeberg.org/rahguzar/consult-hoogle")
 		   (:keywords "docs" "languages")
 		   (:maintainer "rahguzar" . "rahguzar@zohomail.eu")
 		   (:authors
 		    ("rahguzar" . "rahguzar@zohomail.eu"))
-		   (:commit . "635418813c6c6089576cc3b1abb45d173e853aab"))])
+		   (:commit . "2eae2976d8b097183a448f1e1bdbdcba8f8027bf"))])
  (consult-recoll .
 		 [(0 8 1)
 		  ((emacs
@@ -1303,16 +1305,16 @@
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
 	(:commit . "25c810004c2201960f32a60b362eb6ebe524de9f"))])
  (ef-themes .
-	    [(1 8 0)
+	    [(1 9 0)
 	     ((emacs
 	       (27 1)))
 	     "Colorful and legible themes" tar
-	     ((:url . "https://git.sr.ht/~protesilaos/ef-themes")
+	     ((:url . "https://github.com/protesilaos/ef-themes")
 	      (:keywords "faces" "theme" "accessibility")
 	      (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	      (:authors
 	       ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	      (:commit . "18960c3bcb87e72418e638602a843be58aef07d1"))])
+	      (:commit . "b1333b703805a21ed6414386830cb5d1977475b7"))])
  (eglot .
 	[(1 17)
 	 ((emacs
@@ -2000,13 +2002,13 @@
 	     (:url . "https://elpa.gnu.org/packages/greenbar.html")
 	     (:commit . "9526f29d073c533c3e54f0a7597eef1587ffb99e"))])
  (gtags-mode .
-	     [(1 8 1)
+	     [(1 8 2)
 	      ((emacs
 		(28)))
 	      "GNU Global integration with xref, project and imenu." tar
 	      ((:url . "https://github.com/Ergus/gtags-mode")
 	       (:keywords "xref" "project" "imenu" "gtags" "global")
-	       (:commit . "bdf5442efd8e8fae4610b0a73daca6ee81a5b0c4"))])
+	       (:commit . "506659b9ebdcc4be411759a8500763e092c8110a"))])
  (guess-language .
 		 [(0 0 1)
 		  ((cl-lib
@@ -2668,6 +2670,17 @@
 		      (:authors
 		       ("Vitalie Spinu" . "spinuvit@gmail.com"))
 		      (:commit . "590d9f09f8ad9aab747b97f077396a2035dcf50f"))])
+ (mathjax .
+	  [(0 1)
+	   ((emacs
+	     (27 1)))
+	   "Render formulas using MathJax" tar
+	   ((:url . "https://github.com/astoff/mathjax.el")
+	    (:keywords "tex" "text" "tools")
+	    (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
+	    (:authors
+	     ("Augusto Stoffel" . "arstoffel@gmail.com"))
+	    (:commit . "db669451bbee7d2ea9872c28661c4679391b9644"))])
  (mct .
       [(1 0 0)
        ((emacs
