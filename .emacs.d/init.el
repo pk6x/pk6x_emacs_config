@@ -115,9 +115,6 @@
 ;; (insert (format-time-string "---------------- %a, %d %b %y: %I:%M%p"))
 ;; )
 
-;; Ligature.el
-;; Enable the www ligature in every possible major mode
-
 ;; ---------------------------------------------------- End of Startup ----------------------------------------------------
 
 ;; ------------------------------------- From Casey Muratori (C/C++ style and compilation ------------------
@@ -813,7 +810,7 @@
  '(mosue-wheel-follow-mouse nil)
  '(next-line-add-newlines nil)
  '(package-selected-packages
-   '(ligature fira-code-mode auto-complete company rainbow-delimiters color-theme-modern visual-fill-column fill-column-indicator which-key use-package flycheck ample-theme))
+   '(ligature auto-complete company rainbow-delimiters color-theme-modern visual-fill-column fill-column-indicator which-key use-package flycheck ample-theme))
  '(safe-local-variable-values
    '((eval setq flycheck-clang-include-path
 	   (list
@@ -833,7 +830,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Fira Code" :weight semibold :height 110 :width normal))))
+ '(default ((t (:family "Cascadia Code" :weight regular :height 110 :width normal))))
  '(company-tooltip ((t (:background "gray26" :foreground "medium aquamarine"))))
  '(company-tooltip-annotation ((t (:foreground "gray46"))))
  '(company-tooltip-common ((t (:background "gray36" :foreground "gray20"))))
