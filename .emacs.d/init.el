@@ -779,7 +779,7 @@
  '(compilation-ask-about-save nil)
  '(custom-enabled-themes '(soft-charcoal))
  '(custom-safe-themes
-   '("df5ef4a9e1f2798d164c5203a321c57a59f3217ee1d968ecfae600c2d8cd80dc" "72e98842be9313248c7c690917dc33fd22a9f8eac20fd46edbc2249e294ebea8" default))
+   '("1292df73ae739609811a1906bbb04bbfa1c51feae3dd4c6c91390fceb1b3d5a1" default))
  '(delete-auto-save-files nil)
  '(delete-old-versions 'other)
  '(ede-project-directories '("w:/"))
