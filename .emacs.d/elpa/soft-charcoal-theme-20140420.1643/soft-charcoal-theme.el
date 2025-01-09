@@ -47,7 +47,7 @@
  '(font-lock-reference-face ((t (:foreground "#d08689"))))
  '(font-lock-constant-face ((t (:foreground "#8aa6c1"))))
  '(font-lock-doc-face ((t (:foreground "#7d949b"))))
- '(font-lock-function-name-face ((t (:foreground "#7a8bbd"))))
+ '(font-lock-function-name-face ((t (:foreground "#679fad"))))
  '(font-lock-keyword-face ((t (:normal t :foreground "#8aa234"))))
  '(font-lock-reference-face ((t (:normal t :foreground "#b998df"))))
  '(font-lock-string-face ((t (:foreground "#5d90cd"))))
