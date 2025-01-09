@@ -26,12 +26,12 @@
 
 (custom-theme-set-faces
  'soft-charcoal
- '(default ((t (:background "#191919" :foreground "#c2c2c2"))))
+ '(default ((t (:background "#232323" :foreground "#c2c2c2"))))
  '(font-lock-builtin-face ((t (:foreground "#ffc01a"))))
  '(region ((t (:background "#3c414c" :foreground "#faf4c6"))))
  '(highlight ((t (:foreground "#d5dd83" :background "#191919"))))
  '(hl-line ((t (:background "#252525"))))
- '(fringe ((t (:background "#232323" :foreground "#8aa234"))))
+ '(fringe ((t (:background "#191919" :foreground "#8aa234"))))
  '(cursor ((t (:background "#626262"))))
  '(show-paren-match-face ((t (:background "#f03f3f"))))
  '(isearch ((t (:bold t :foreground "#f03f3f" :background "#e2e2e5"))))
