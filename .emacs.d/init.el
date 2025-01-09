@@ -501,11 +501,6 @@
         "--header-insertion-decorators=0"))
 ;; (add-hook 'c++-mode-hook #'lsp)
 
-;; Fira code
-;; (use-package fira-code-mode
-;; :custom (fira-code-mode-disabled-ligatures '("[]" "x"))  ; ligatures you don't want
-;; :hook prog-mode)                                         ; mode to enable fira-code-mode in
-
 ;; Ligature
 ;; This assumes you've installed the package via MELPA.
 (use-package ligature
@@ -533,10 +528,8 @@
   ;; per mode with `ligature-mode'.
   (global-ligature-mode t))
 
-;; Color theme modern
-(require 'color-theme-modern)
-(load-theme 'ample-flat t t)
-(enable-theme 'ample-flat)
+;; Soft-charchoal theme
+;; (load-theme 'soft-charcoal)
 
 (require 'flycheck)
 (use-package flycheck
@@ -784,9 +777,9 @@
  '(auto-show-mode t t)
  '(column-number-mode t)
  '(compilation-ask-about-save nil)
- '(custom-enabled-themes '(ample))
+ '(custom-enabled-themes '(soft-charcoal))
  '(custom-safe-themes
-   '("8331f440e8c1449573692ce96a43ac549583155ce1ee5607d6df9d1f52bc1d77" default))
+   '("72e98842be9313248c7c690917dc33fd22a9f8eac20fd46edbc2249e294ebea8" default))
  '(delete-auto-save-files nil)
  '(delete-old-versions 'other)
  '(ede-project-directories '("w:/"))
@@ -810,7 +803,7 @@
  '(mosue-wheel-follow-mouse nil)
  '(next-line-add-newlines nil)
  '(package-selected-packages
-   '(ligature auto-complete company rainbow-delimiters color-theme-modern visual-fill-column fill-column-indicator which-key use-package flycheck ample-theme))
+   '(color-theme-modern soft-charcoal-theme ligature auto-complete company rainbow-delimiters visual-fill-column fill-column-indicator which-key use-package flycheck))
  '(safe-local-variable-values
    '((eval setq flycheck-clang-include-path
 	   (list
@@ -830,16 +823,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Cascadia Code" :weight semibold :height 110 :width normal))))
- '(company-tooltip ((t (:background "gray26" :foreground "medium aquamarine"))))
+ '(default ((t (:family "Cascadia Code" :weight regular :height 110 :width normal))))
+ '(company-tooltip ((t (:background "gray26" :foreground "#b19779"))))
  '(company-tooltip-annotation ((t (:foreground "gray46"))))
  '(company-tooltip-common ((t (:background "gray36" :foreground "gray20"))))
- '(company-tooltip-common-selection ((t (:background "gray26" :foreground "medium aquamarine"))))
+ '(company-tooltip-common-selection ((t (:background "gray26" :foreground "#b19779"))))
  '(company-tooltip-selection ((t (:background "gray" :foreground "gray21"))))
  '(flycheck-error ((t nil)))
  '(flycheck-fringe-error ((t (:inherit error))))
- '(font-lock-doc-face ((t (:background "#3b3b3b" :foreground "#6aaf50"))))
- '(font-lock-string-face ((t (:foreground "SlateBlue3" :weight normal))))
+ '(font-lock-doc-face ((t (:background "#3b3b3b" :foreground "#7a8bbd"))))
+ '(font-lock-string-face ((t (:foreground "#c2c2c2" :weight normal))))
  '(highlight ((t (:background "gray24"))))
  '(hl-line ((t (:extend t :background "gray19"))))
  '(lsp-headerline-breadcrumb-path-error-face ((t (:inherit lsp-headerline-breadcrumb-path-face :background "IndianRed2" :underline (:color "Red1" :style wave :position nil) :weight extra-bold))))
