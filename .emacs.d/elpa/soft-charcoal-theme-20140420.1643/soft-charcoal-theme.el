@@ -27,7 +27,7 @@
 (custom-theme-set-faces
  'soft-charcoal
  '(default ((t (:background "#232323" :foreground "#c2c2c2"))))
- '(font-lock-builtin-face ((t (:foreground "#ffc01a"))))
+ '(font-lock-builtin-face ((t (:foreground "#c2c2c2"))))
  '(region ((t (:background "#3c414c" :foreground "#faf4c6"))))
  '(highlight ((t (:foreground "#d5dd83" :background "#191919"))))
  '(hl-line ((t (:background "#252525"))))
