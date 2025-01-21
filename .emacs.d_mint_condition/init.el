@@ -59,11 +59,6 @@
 		    (kill-buffer buffer)))))
 (add-hook 'minibuffer-setup-hook
 	  '(lambda ()
-	     (let ((buffer "*clangd::stderr*"))
-	       (and (get-buffer buffer)
-		    (kill-buffer buffer)))))
-(add-hook 'minibuffer-setup-hook
-	  '(lambda ()
 	     (let ((buffer "*lsp-log*"))
 	       (and (get-buffer buffer)
 		    (kill-buffer buffer)))))
@@ -471,18 +466,21 @@
   )
 
 ;; lsp-mode
-
 ;; To cycle between function prototypes (overloaded functions in c++) in lsp
 ;; after typing in the function prototype, in the echo section it will display how many
 ;; prototypes are there for the same function signature, e.g. (1/4) function ...
 ;; Press M-n to cycle to the next prototype (2/4) or M-p to the previous one (1/4) etc
-
 (require 'lsp-mode)
 (use-package lsp-mode
   :ensure t
   :hook ((c++-mode . lsp))
   )
-(setq lsp-ui-doc-enable 1)
+;; (use-package lsp-ui)
+;; (use-package lsp-treemacs)
+;; (setq lsp-ui-doc-enable 1)
+;; (setq lsp-ui-sideline-show-diagnostics 1)
+;; (setq lsp-ui-sideline-update-mode 1)
+;; (setq lsp-ui-sideline-show-hover nil)
 (setq lsp-lens-enable 1)
 (setq lsp-headerline-breadcrumb-enable 1)
 (setq lsp-modeline-code-actions-enable 1)
@@ -796,6 +794,7 @@
  '(kept-old-versions 5)
  '(kill-buffer "*Messages*")
  '(kill-whole-line nil)
+ '(lsp-clangd-version "19.1.2")
  '(make-backup-file-name-function 'ignore)
  '(make-backup-files nil)
  '(max-lisp-eval-depth 10000)
@@ -803,7 +802,7 @@
  '(mosue-wheel-follow-mouse nil)
  '(next-line-add-newlines nil)
  '(package-selected-packages
-   '(color-theme-modern soft-charcoal-theme ligature auto-complete company rainbow-delimiters visual-fill-column fill-column-indicator which-key use-package flycheck))
+   '(posframe treemacs lsp-treemacs lsp-ui color-theme-modern soft-charcoal-theme ligature auto-complete company rainbow-delimiters visual-fill-column fill-column-indicator which-key use-package flycheck))
  '(safe-local-variable-values
    '((eval setq flycheck-clang-include-path
 	   (list
@@ -833,6 +832,7 @@
  '(flycheck-fringe-error ((t (:inherit error))))
  '(font-lock-doc-face ((t (:background "#232323" :foreground "#679fad"))))
  '(font-lock-string-face ((t (:foreground "#c2c2c2" :weight normal))))
+ '(font-lock-type-face ((t (:foreground "#8885b2"))))
  '(highlight ((t (:background "gray24"))))
  '(hl-line ((t (:extend t :background "gray19"))))
  '(lsp-headerline-breadcrumb-path-error-face ((t (:inherit lsp-headerline-breadcrumb-path-face :background "IndianRed2" :underline (:color "Red1" :style wave :position nil) :weight extra-bold))))
@@ -850,6 +850,7 @@
  '(rainbow-delimiters-depth-7-face ((t (:foreground "#a28469"))))
  '(rainbow-delimiters-depth-8-face ((t (:foreground "#3b895f"))))
  '(rainbow-delimiters-depth-9-face ((t (:foreground "#cd96cd"))))
- '(rainbow-delimiters-unmatched-face ((t (:background "red")))))
+ '(rainbow-delimiters-unmatched-face ((t (:background "red"))))
+ '(show-paren-match ((t (:background "royal blue")))))
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
