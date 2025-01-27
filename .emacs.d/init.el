@@ -830,7 +830,7 @@
  '(company-tooltip-selection ((t (:background "gray" :foreground "gray21"))))
  '(flycheck-error ((t nil)))
  '(flycheck-fringe-error ((t (:inherit error))))
- '(font-lock-doc-face ((t (:background "gainsboro" :foreground "#679fad"))))
+ '(font-lock-doc-face ((t (:background "gray34" :foreground "#679fad"))))
  '(font-lock-string-face ((t (:foreground "#c2c2c2" :weight normal))))
  '(font-lock-type-face ((t (:foreground "#8885b2"))))
  '(header-line ((t (:inherit mode-line :background "#191919" :foreground "grey90" :box nil))))
