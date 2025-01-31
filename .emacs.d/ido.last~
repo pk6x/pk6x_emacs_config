@@ -1,0 +1,34 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("c:/Users/amgun/AppData/Roaming/" . ".emacs.d/")
+ ("w:/me_handmadehero/" . "code/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "w:/me_handmadehero/code/"
+ "c:/Users/amgun/AppData/Roaming/.emacs.d/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "handmade.cpp"
+ "init.el"
+ "win32_handmade.cpp"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("w:/me_handmadehero/code/" (26509 27127 0 0) "win32_handmade.h" "win32_handmade.cpp" "static_check.bat" "handmade_tile.h" "handmade_tile.cpp" "handmade_random.h" "handmade_platform.h" "handmade_math.h" "handmade_intrinsics.h" "handmade.h" "handmade.cpp" "build.bat" "../" "./")
+
+ ("c:/Users/amgun/AppData/Roaming/.emacs.d/" (26509 26894 0 0) "url/" "transient/" "snippets/" "lisp/" "init.el" "elpa/" "eln-cache/" "auto-save-list/" ".lsp-session-v1" ".cache/" "../" "./")
+
+ ("c:/Users/amgun/AppData/Roaming/" (26508 47108 0 0) "VoiceAccess/" "Visual Studio Setup/" "Turtle Beach/" "SnapDownloader/" "remedybg/" "QtProject/" "Pentablet V3/" "NZXT CAM/" "NVIDIA/" "NuGet/" "MPC-HC/" "Microsoft/" "MadeWithMischief/" "krita/" "IDM/" "GIMP/" "Everything/" "EasyAntiCheat/" "DMCache/" "discord/" "com.adobe.dunamis/" "Cognosphere/" "Autodesk/" "Adobe/" "10x/" ".emacs.d/" "../" "./")
+
+ ("w:/me_handmadehero/" (26426 2077 0 0) "misc/" "data/" "code/" "build/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

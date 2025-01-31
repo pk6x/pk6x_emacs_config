@@ -450,7 +450,7 @@ PATH is the current folder to be checked."
     (remove-hook 'lsp-unconfigure-hook #'lsp-headerline--disable-breadcrumb t)
 
     (remove-hook 'xref-after-jump-hook #'lsp-headerline--check-breadcrumb t)
-
+    
     (setq lsp-headerline--path-up-to-project-segments nil)
     (setq header-line-format (remove '(t (:eval (window-parameter nil 'lsp-headerline--string) )) header-line-format)))))
 
