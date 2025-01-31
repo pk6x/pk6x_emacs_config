@@ -92,6 +92,7 @@
   (hs-hide-all)
   )
 (add-hook 'c++-mode-hook 'folded-all)
+(setq hs-hide-comments-when-hiding-all nil)
 
 ;; Added syntax class
 ;; (modify-syntax-entry ?– "w")
