@@ -1,0 +1,62 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("c:/Users/amgun/AppData/Roaming/.emacs.d/elpa/" . "dimmer-20220817.122/")
+ ("c:/Users/amgun/OneDrive/" . "Desktop/")
+ ("c:/Users/amgun/" . "OneDrive/")
+ ("c:/Users/" . "amgun/")
+ ("c:/" . "Users/")
+ ("c:/Users/amgun/AppData/Roaming/" . ".emacs.d/")
+ ("w:/me_handmadehero/" . "code/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "w:/me_handmadehero/code/"
+ "c:/Users/amgun/AppData/Roaming/.emacs.d/"
+ "c:/Users/amgun/AppData/Roaming/.emacs.d/elpa/dimmer-20220817.122/"
+ "c:/Users/amgun/OneDrive/Desktop/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "handmade.h"
+ "handmade.cpp"
+ "init.el"
+ "dimmer.el"
+ "handmade_intrinsics.h"
+ "handmade_tile.h"
+ "handmade_math.h"
+ "test.cpp"
+ "win32_handmade.cpp"
+ "handmade_tile.cpp"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("c:/Users/amgun/OneDrive/Desktop/" (26518 33146 0 0) "win32_emacs_envdev.lnk" "test.cpp" "stuff/" "New Text Document.txt" "my_dev_portfolio/" "desktop.ini" "Defining a Single Enumerant.pdf" "../" "./")
+
+ ("c:/Users/amgun/AppData/Roaming/.emacs.d/elpa/dimmer-20220817.122/" (26525 15205 0 0) "dimmer.elc" "dimmer.el" "dimmer-pkg.el" "dimmer-autoloads.el" "../" "./")
+
+ ("c:/Users/amgun/AppData/Roaming/.emacs.d/" (26525 15273 0 0) "url/" "transient/" "snippets/" "lisp/" "init.el" "ido.last~" "ido.last" "elpa/" "eln-cache/" "auto-save-list/" ".lsp-session-v1" ".cache/" "../" "./")
+
+ ("c:/Users/amgun/AppData/Roaming/.emacs.d/elpa/" (26525 14910 0 0) "with-editor-20240831.2230/" "which-key-20240620.2145/" "use-package-20230426.2324/" "try-20181204.236/" "spinner-1.7.4/" "soft-charcoal-theme-20140420.1643/" "s-20220902.1511/" "rainbow-delimiters-20210515.1254/" "popup-20240101.830/" "pkg-info-20150517.1143/" "markdown-mode-20241107.349/" "lv-20200507.1518/" "lsp-mode-20241110.712/" "ligature-20220808.1225/" "ht-20230703.558/" "flycheck-20240726.456/" "f-20241003.1131/" "epl-20180205.2049/" "dimmer-20220817.122/" "dash-20240510.1327/" "compat-29.1.4.2/" "company-20241106.2000/" "color-theme-modern-20231116.2258/" "bind-key-20230203.2004/" "auto-complete-20240320.1734/" "archives/" "../" "./")
+
+ ("w:/me_handmadehero/code/" (26525 14496 0 0) "win32_handmade.h" "win32_handmade.cpp" "static_check.bat" "handmade_tile.h" "handmade_tile.cpp" "handmade_random.h" "handmade_platform.h" "handmade_math.h" "handmade_intrinsics.h" "handmade.h" "handmade.cpp" "build.bat" "../" "./")
+
+ ("c:/Users/amgun/OneDrive/" (26433 14855 0 0) "setup_files/" "Pictures/" "Documents/" "Desktop/" "Creative Cloud Files/" "AppData/" ".849C9593-D756-4E56-8D6E-42412F2A707B" "../" "./")
+
+ ("c:/Users/amgun/Videos/" (26516 31594 0 0) "SnapDownloader/" "NVIDIA/" "desktop.ini" "Captures/" ".lock_11404" "../" "./")
+
+ ("c:/Users/amgun/" (26508 47719 0 0) "_viminfo" "_lesshst" "vimfiles/" "Videos/" "Templates/" "Start Menu/" "source/" "SendTo/" "Searches/" "Saved Games/" "Recent/" "PrintHood/" "OneDrive/" "ntuser.ini" "NTUSER.DAT{2ad838bc-efea-11ee-a54d-000d3a94eaa1}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{2ad838bc-efea-11ee-a54d-000d3a94eaa1}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{2ad838bc-efea-11ee-a54d-000d3a94eaa1}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "NetHood/" "My Documents/" "Music/" "Local Settings/" "Links/" "Favorites/" "Downloads/" "Documents/" "Cookies/" "Contacts/" "Application Data/" "AppData/" "ansel/" ".lesshst" ".gitconfig" ".cache/" "../" "./")
+
+ ("c:/Users/" (26433 13794 0 0) "Public/" "desktop.ini" "Default User/" "Default/" "amgun/" "All Users/" "../" "./")
+
+ ("c:/Users/amgun/AppData/Roaming/" (26515 61236 0 0) "VoiceAccess/" "Visual Studio Setup/" "Turtle Beach/" "SnapDownloader/" "remedybg/" "QtProject/" "Pentablet V3/" "NZXT CAM/" "NVIDIA/" "NuGet/" "MPC-HC/" "MiltonPaint/" "Microsoft/" "MadeWithMischief/" "krita/" "IDM/" "GIMP/" "Everything/" "EasyAntiCheat/" "DMCache/" "discord/" "com.adobe.dunamis/" "Cognosphere/" "Autodesk/" "Adobe/" "10x/" ".emacs.d/" "../" "./")
+
+ ("w:/me_handmadehero/" (26426 2077 0 0) "misc/" "data/" "code/" "build/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

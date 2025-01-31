@@ -540,6 +540,13 @@
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
+;; Dimmer
+(require 'dimmer)
+(dimmer-configure-which-key)
+(dimmer-configure-helm)
+(dimmer-mode t)
+(setq dimmer-fraction 0.65)
+
 ;; C++ compilation
 ;; (defun code-compile ()
 ;; (interactive)
@@ -802,7 +809,7 @@
  '(mosue-wheel-follow-mouse nil)
  '(next-line-add-newlines nil)
  '(package-selected-packages
-   '(posframe treemacs lsp-treemacs lsp-ui color-theme-modern soft-charcoal-theme ligature auto-complete company rainbow-delimiters visual-fill-column fill-column-indicator which-key use-package flycheck))
+   '(dimmer posframe treemacs lsp-treemacs lsp-ui color-theme-modern soft-charcoal-theme ligature auto-complete company rainbow-delimiters visual-fill-column fill-column-indicator which-key use-package flycheck))
  '(safe-local-variable-values
    '((eval setq flycheck-clang-include-path
 	   (list
