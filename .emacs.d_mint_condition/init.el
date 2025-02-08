@@ -84,6 +84,38 @@
 		    (kill-buffer buffer)))))
 
 
+;; Ignore some buffers from cycling through
+(defcustom my-skippable-buffers '("*Messages*" "*Help*" "*lsp-log*" "*clangd*" "*clangd::stderr*" 
+				  "*compilation*" "*Completions*" "*Flycheck error messages*"
+				  "*Compile-Log*" "*grep*" "*Ido Completions*")
+  "Buffer names ignored by `my-next-buffer' and `my-previous-buffer'."
+  :type '(repeat string))
+
+(defun my-change-buffer (change-buffer)
+  "Call CHANGE-BUFFER until current buffer is not in `my-skippable-buffers'."
+  (let ((initial (current-buffer)))
+    (funcall change-buffer)
+    (let ((first-change (current-buffer)))
+      (catch 'loop
+        (while (member (buffer-name) my-skippable-buffers)
+          (funcall change-buffer)
+          (when (eq (current-buffer) first-change)
+            (switch-to-buffer initial)
+            (throw 'loop t)))))))
+
+(defun my-next-buffer ()
+  "Variant of `next-buffer' that skips `my-skippable-buffers'."
+  (interactive)
+  (my-change-buffer 'next-buffer))
+
+(defun my-previous-buffer ()
+  "Variant of `previous-buffer' that skips `my-skippable-buffers'."
+  (interactive)
+  (my-change-buffer 'previous-buffer))
+
+(define-key global-map "\eK" 'my-next-buffer)
+;; (global-set-key [remap previous-buffer] 'my-previous-buffer)
+
 ;; hs-minor-mode
 (add-hook 'c++-mode-hook 'hs-minor-mode)
 (defun folded-all()
@@ -150,10 +182,7 @@
   )
 
 (load-library "view")
-;; (require 'cc-mode)
-(require 'ido)
 (require 'compile)
-(ido-mode t)
 
 (defun ediff-setup-windows (buffer-A buffer-B buffer-C control-buffer)
   (ediff-setup-windows-plain buffer-A buffer-B buffer-C control-buffer)
@@ -465,6 +494,13 @@
 (use-package try :ensure t)
 (use-package which-key :ensure t :config (which-key-mode)
   )
+;; (require 'cc-mode)
+(require 'ido)
+
+
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
 
 ;; lsp-mode
 ;; To cycle between function prototypes (overloaded functions in c++) in lsp
@@ -580,7 +616,7 @@
 (define-key global-map "\ej" 'move-next-line-beginning-of-text)
 (define-key global-map "\eJ" 'imenu)
 (define-key global-map "\ek" 'delete-backward-char)
-(define-key global-map "\eK" 'previous-buffer)
+;; (define-key global-map "\eK" 'previous-buffer)
 (define-key global-map "\el" 'copy-line)
 (define-key global-map "\eL" 'cut-line)
 (define-key global-map "\em" 'forward-word)
@@ -640,7 +676,7 @@
 (define-key global-map [?\C-\M- ] 'mark-sexp)
 
 (defun previous-blank-line ()
-  ;; "Moves to the previous line containing nothing but whitespace."
+;; "Moves to the previous line containing nothing but whitespace."
   (interactive)
   (search-backward-regexp "^[ \t]*\n")
   )
